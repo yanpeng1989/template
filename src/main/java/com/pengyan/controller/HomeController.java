@@ -13,6 +13,7 @@ public class HomeController {
 
 	@RequestMapping(value = "index")
 	public String Test() {
+		System.out.println("++++++++++++"+homeService.queryById(1).getAddress().toString()+"++++++++++++");
 		return "index";
 	}
 
