@@ -41,6 +41,6 @@ public class UserImpl implements Userinterface {
 	@Override
 	public List<User> queryAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSessionTemplate.selectList(statement);
 	}
 }
