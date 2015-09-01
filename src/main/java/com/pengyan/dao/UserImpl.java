@@ -1,12 +1,14 @@
 package com.pengyan.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.pengyan.interfaces.Userinterface;
 import com.pengyan.model.User;
-import com.sun.tools.javac.util.List;
 
 @Repository
 public class UserImpl implements Userinterface {
@@ -23,7 +25,6 @@ public class UserImpl implements Userinterface {
 	@Override
 	public void save(User u) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -41,6 +42,8 @@ public class UserImpl implements Userinterface {
 	@Override
 	public List<User> queryAll() {
 		// TODO Auto-generated method stub
-		return sqlSessionTemplate.selectList(statement);
+		List<User> ls = new ArrayList<User>();
+		ls = sqlSessionTemplate.selectList("queryAll");
+		return ls;
 	}
 }

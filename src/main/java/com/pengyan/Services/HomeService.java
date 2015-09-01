@@ -1,5 +1,7 @@
 package com.pengyan.Services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +17,10 @@ public class HomeService {
 		return userImpl.queryById(id);
 	}
 
+	public List<User> queryAll() {
+		List<User> ls = userImpl.queryAll();
+		return ls;
+	}
+
+	
 }

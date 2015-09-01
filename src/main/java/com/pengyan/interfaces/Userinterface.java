@@ -1,7 +1,7 @@
 package com.pengyan.interfaces;
 
 import com.pengyan.model.User;
-import com.sun.tools.javac.util.List;
+import java.util.List;
 
 public interface Userinterface {
 	public User queryById(int id);
