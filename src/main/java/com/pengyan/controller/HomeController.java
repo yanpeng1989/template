@@ -14,11 +14,8 @@ public class HomeController {
 
 	@RequestMapping(value = "index")
 	public String Test(Model model) {
-		model.addAttribute("ls", homeService.queryAll().size());
-		System.out.println(homeService.queryAll().get(0).getId());
-		System.out.println(homeService.queryAll().get(0).getComment());
-		System.out.println(homeService.queryAll().get(0).getAge());
-		System.out.println(homeService.queryAll().get(0).getName());
+		model.addAttribute("name", homeService.queryAll().get(0).getName());
+		model.addAttribute("age", homeService.queryAll().get(0).getAge());
 		return "index";
 	}
 
