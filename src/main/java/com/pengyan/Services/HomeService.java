@@ -22,5 +22,8 @@ public class HomeService {
 		return ls;
 	}
 
-	
+	public void delete(int id) {
+		userImpl.delete(id);
+	}
+
 }

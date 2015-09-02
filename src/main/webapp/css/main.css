@@ -1,0 +1,10 @@
+.body_style {
+	background-color: #F7F7F9;
+	text-align: center;
+}
+
+.main_contain {
+	margin: 0 auto;
+	border: crimson solid 0px;
+	margin-top: 200px;
+}

@@ -25,6 +25,7 @@ public class UserImpl implements Userinterface {
 	@Override
 	public void save(User u) {
 		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -36,7 +37,8 @@ public class UserImpl implements Userinterface {
 	@Override
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
-
+		int delete = sqlSessionTemplate.delete("delete_user", id);
+		System.out.println(delete);
 	}
 
 	@Override
