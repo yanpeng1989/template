@@ -24,8 +24,6 @@
 				</tr>
 			</table>
 		</form>
-		</br>
-		</br>
 		<form name="" action="insert.do" method="get">
 			<table style="border: crimson solid 1px;">
 				<tr>
