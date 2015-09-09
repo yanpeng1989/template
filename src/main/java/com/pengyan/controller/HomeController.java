@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.pengyan.Services.HomeService;
 
@@ -34,21 +34,27 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping(value = { "welcome" }, method = RequestMethod.GET)
-	public String welcomePage(Model model) {
+	@RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
+	public ModelAndView welcome() {
 
-		model.addAttribute("title", "Spring Security Hello World");
-		model.addAttribute("message", "This is welcome page!");
-		return "welcome";
-
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Welcome - Spring Security Hello World");
+		model.addObject("message", "This is welcome page!");
+		model.setViewName("hello");
+		return model;
 	}
 
-	@RequestMapping(value = "admin", method = RequestMethod.GET)
-	public String adminPage(Model model) {
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public ModelAndView admin() {
 
-		model.addAttribute("title", "Spring Security Hello World");
-		model.addAttribute("message", "This is welcome page!");
-		return "admin";
+		ModelAndView model = new ModelAndView();
+		
+		model.addObject("title", "Admin - Spring Security Hello World");
+		model.addObject("message", "This is protected page!");
+		model.setViewName("admin");
+
+		return model;
+
 	}
 
 }
