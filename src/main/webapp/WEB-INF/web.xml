@@ -20,7 +20,7 @@
 	</filter-mapping>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/applicationContext.xml,classpath:spring-security.xml</param-value>
+		<param-value>/WEB-INF/applicationContext.xml,/WEB-INF/spring-security.xml</param-value>
 	</context-param>
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
