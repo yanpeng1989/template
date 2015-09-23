@@ -48,13 +48,17 @@ public class HomeController {
 	public ModelAndView admin() {
 
 		ModelAndView model = new ModelAndView();
-		
+
 		model.addObject("title", "Admin - Spring Security Hello World");
 		model.addObject("message", "This is protected page!");
 		model.setViewName("admin");
 
 		return model;
+	}
 
+	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	public String map() {
+		return "map";
 	}
 
 }
